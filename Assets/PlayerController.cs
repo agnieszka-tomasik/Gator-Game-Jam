@@ -6,9 +6,8 @@ public class PlayerController : MonoBehaviour
 {
 
     public Rigidbody2D rb;
-
-
-
+    private bool isJumping = false;
+    private float maxSpeed = 10;
     // Update is called once per frame
     void Update()
     {
@@ -16,24 +15,36 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
 
-            rb.velocity = new Vector2(-10, rb.velocity.y);
+            rb.velocity = new Vector2(-maxSpeed, rb.velocity.y);
             gameObject.GetComponent<SpriteRenderer>().flipX = true;
 
         }
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
 
-            rb.velocity = new Vector2(10, rb.velocity.y);
+            rb.velocity = new Vector2(maxSpeed, rb.velocity.y);
             gameObject.GetComponent<SpriteRenderer>().flipX = false;
 
         }
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow))
         {
 
-            rb.velocity = new Vector2(rb.velocity.x, 10);
+            if (!isJumping)
+            {
+                GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 20), ForceMode2D.Impulse);
+                isJumping = true;
+            }
+
 
         }
 
 
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+            isJumping = false;
+
+    }
 }
+
