@@ -8,22 +8,25 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
     private bool isJumping = false;
     private float maxSpeed = 10;
+    public double soulCount;
+
+
+
     // Update is called once per frame
     void Update()
     {
 
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
-
             rb.velocity = new Vector2(-maxSpeed, rb.velocity.y);
-            gameObject.GetComponent<SpriteRenderer>().flipX = true;
+            gameObject.GetComponent<SpriteRenderer>().flipX = false;
 
         }
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
 
             rb.velocity = new Vector2(maxSpeed, rb.velocity.y);
-            gameObject.GetComponent<SpriteRenderer>().flipX = false;
+            gameObject.GetComponent<SpriteRenderer>().flipX = true;
 
         }
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow))
@@ -35,10 +38,19 @@ public class PlayerController : MonoBehaviour
                 isJumping = true;
             }
 
-
         }
+        
 
+    }
 
+    void setSoulCount(double soulCount)
+    {
+        this.soulCount = soulCount;
+    }
+
+    double getSoulCount(double soulCount)
+    {
+        return this.soulCount;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
