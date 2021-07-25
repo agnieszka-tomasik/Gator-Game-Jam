@@ -470,7 +470,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 544803558}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.41, y: -0.57, z: 0}
+  m_LocalPosition: {x: 37.7, y: -0.7, z: 0}
   m_LocalScale: {x: 0.62895423, y: -5.698407, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -733,7 +733,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 764940557}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.3, y: 0.66, z: 0}
+  m_LocalPosition: {x: -13.7, y: 8.5, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children:
   - {fileID: 1008470139}
@@ -1146,7 +1146,7 @@ GameObject:
   - component: {fileID: 1117701940}
   - component: {fileID: 1117701944}
   m_Layer: 0
-  m_Name: FloatyBoi
+  m_Name: Bobbit
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1164,7 +1164,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -1186,7 +1186,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -1.8245649}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1197,7 +1197,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.8586197, y: 2.5025845}
   m_EdgeRadius: 0
 --- !u!212 &1117701942
 SpriteRenderer:
@@ -1239,7 +1239,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2748c76919954f8468f95c3b3612abe1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d82ed12f963b99346b2873e2e6f2c6ec, type: 3}
   m_Color: {r: 1, g: 0.86581904, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1258,7 +1258,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1117701939}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.9, y: 10.7, z: 0}
+  m_LocalPosition: {x: 10.4, y: -1.7, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1273,19 +1273,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1117701939}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3930978bf28256c4baa3146cfc3a80f9, type: 3}
+  m_Script: {fileID: 11500000, guid: 441a718ec0967384da7b67bfb76df706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   amulet: {fileID: 0}
-  player: {fileID: 764940557}
+  player: {fileID: 0}
   stunned: 0
   stunTimer: 0
   summoned: 0
   summonSpeed: 50
-  movementSpeed: 0.04
-  x: 0
-  y: 0
-  radius: 0
+  movementSpeed: 3
+  vertical: 0
+  downright: 0
 --- !u!1 &1442015537
 GameObject:
   m_ObjectHideFlags: 0
@@ -1542,7 +1541,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1685968972}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.38, y: 4.81, z: 0}
+  m_LocalPosition: {x: 30.8, y: -6, z: 0}
   m_LocalScale: {x: 23.55634, y: 5.2045, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
