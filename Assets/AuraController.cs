@@ -8,9 +8,13 @@ public class AuraController : MonoBehaviour
     public GameObject amulet;
     public Transform playerPos;
     public SpriteRenderer spriteRenderer;
+    public AudioSource audioSource;
+    public AudioClip zap;
 
     public double animationTimer = 0;
-
+    void Start() {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -21,6 +25,9 @@ public class AuraController : MonoBehaviour
         {
             this.animationTimer = 0.400;
             this.spriteRenderer.enabled = true;
+
+            //zap
+            audioSource.PlayOneShot(zap, 0.7f); 
         }
 
         if (animationTimer > 0)

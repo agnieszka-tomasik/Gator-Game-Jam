@@ -10,9 +10,12 @@ public class PlayerController : MonoBehaviour
     private bool isJumping = false;
     private float maxSpeed = 10;
     public double soulCount = 0;
+    public AudioSource audioSource;
+    public AudioClip jump, hit, soulCapture;
 
-
-
+    void Start() {
+        audioSource = GetComponent<AudioSource>();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -37,6 +40,7 @@ public class PlayerController : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
                 GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 20), ForceMode2D.Impulse);
                 isJumping = true;
+                audioSource.PlayOneShot(jump,0.4f);
             }
 
         }
@@ -45,14 +49,17 @@ public class PlayerController : MonoBehaviour
     void SoulCapture()
     {
         this.soulCount++;
+        audioSource.PlayOneShot(soulCapture, 0.4f);
     }
 
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Ground")
+        {
             isJumping = false;
-
+            audioSource.PlayOneShot(hit, 0.4f);
+        }
     }
 
     
