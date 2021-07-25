@@ -8,11 +8,9 @@ public class WispController : MonoBehaviour
     public GameObject player;
 
     public bool stunned = false;
-    //public bool stunTimerStarted = false;
     public double stunTimer = 0;
 
     public bool summoned = false;
-    //public bool firstDeath = false;
     public float speed = 50.0f;
 
     // Start is called before the first frame update

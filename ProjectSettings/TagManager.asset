@@ -10,6 +10,7 @@ TagManager:
   - Stunned
   - DeathsDoor
   - WithinReach
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -46,4 +47,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Aura
+    uniqueID: 2539625549
+    locked: 0
+  - name: PlayerCharacter
+    uniqueID: 641219361
+    locked: 0
+  - name: Amulet
+    uniqueID: 1233253793
     locked: 0
