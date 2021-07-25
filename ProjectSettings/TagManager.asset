@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Aura
   - Enemy
+  - Amulet
+  - Stunned
+  - DeathsDoor
+  - WithinReach
   layers:
   - Default
   - TransparentFX

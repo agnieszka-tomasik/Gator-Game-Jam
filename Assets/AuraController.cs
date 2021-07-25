@@ -4,50 +4,39 @@ using UnityEngine;
 
 public class AuraController : MonoBehaviour
 {
-    public GameObject Player;
+
+    public GameObject amulet;
     public Transform playerPos;
     public SpriteRenderer spriteRenderer;
-    public CircleCollider2D circleCollider;
-    public double timer = 0;
-    public List<GameObject> enemiesInTrigger = new List<GameObject>();
 
-    private PlayerController playerController;
+    public double animationTimer = 0;
 
-
-    void Start()
-    {
-        Debug.Log("Test", Player);
-        this.playerController = GameObject.Find("Player").GetComponent<PlayerController>();
-        this.spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-        this.circleCollider = gameObject.GetComponent<CircleCollider2D>();
-    }
 
     // Update is called once per frame
     void Update()
     {
         transform.position = new Vector3(playerPos.position.x, playerPos.position.y, transform.position.z);
 
-        if (Input.GetKey(KeyCode.E) && timer == 0)
+        if (Input.GetKey(KeyCode.E) && animationTimer <= 0)
         {
-            this.timer = 0.200;
+            this.animationTimer = 0.400;
             this.spriteRenderer.enabled = true;
         }
 
-        if (timer > 0)
+        if (animationTimer > 0)
         {
-            foreach (GameObject enemy in enemiesInTrigger)
+            GameObject[] triggeredEnemies = GameObject.FindGameObjectsWithTag("WithinReach");
+
+            foreach (GameObject enemy in triggeredEnemies)
             {
-                Debug.Log("Deleting an enemy");
-                enemiesInTrigger.Remove(enemy);
-                Destroy(enemy);
-                playerController.soulCount++;
+                enemy.tag = "Stunned";
             }
 
-            timer -= Time.deltaTime;
+            animationTimer -= Time.deltaTime;
 
-            if (timer <= 0)
+            if (animationTimer <= 0)
             {
-                timer = 0;
+                animationTimer = 0;
                 this.spriteRenderer.enabled = false;
             }
         }
@@ -55,25 +44,17 @@ public class AuraController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Entered: " + other.gameObject.name);
-        // If the enemy has entered the trigger sphere
         if (other.gameObject.tag == "Enemy")
         {
-            // If the enemy is not already in the list
-            if (!enemiesInTrigger.Contains(other.gameObject))
-            {
-                // Add him to the list
-                enemiesInTrigger.Add(other.gameObject);
-            }
+            other.gameObject.tag = "WithinReach";
         }
     }
 
     void onTriggerExit2D(Collider2D other)
     {
-        Debug.Log("Exited: " + other.gameObject.name);
-        if (other.gameObject.tag == "Enemy")
+        if (other.gameObject.tag == "WithinReach")
         {
-            enemiesInTrigger.Remove(other.gameObject);
+            other.gameObject.tag = "Enemy";
         }
     }
 }
