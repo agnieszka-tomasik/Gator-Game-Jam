@@ -19,13 +19,6 @@ public class Bobbit : MonoBehaviour
     public bool downright;
     
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -62,7 +55,7 @@ public class Bobbit : MonoBehaviour
 
             if (Vector3.Distance(transform.position, amulet.transform.position) <= 0.1)
             {
-                player.SendMessage("SoulCapture");
+                player.SendMessage("SoulCaptured");
                 Destroy(this.gameObject);
             }
         }
@@ -93,7 +86,6 @@ public class Bobbit : MonoBehaviour
 
         //update the position
         transform.position = transform.position + new Vector3(horizontalInput * movementSpeed * Time.deltaTime, verticalInput * movementSpeed * Time.deltaTime, 0);
-
 
     }
 }

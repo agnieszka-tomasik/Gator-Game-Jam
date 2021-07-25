@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soulReq: 1
-  player: {fileID: 0}
+  player: {fileID: 1087369492}
 --- !u!50 &29471712
 Rigidbody2D:
   serializedVersion: 4
@@ -397,7 +397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53872d8c150c569478c02085b8fa7b01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1087369488}
   num: 1
 --- !u!61 &92323070
 BoxCollider2D:
@@ -521,7 +521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 697dee2bf988bb948b07dfc580ba834f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1087369488}
 --- !u!61 &279520027
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -645,8 +645,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3930978bf28256c4baa3146cfc3a80f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amulet: {fileID: 0}
-  player: {fileID: 0}
+  amulet: {fileID: 1070989930}
+  player: {fileID: 1087369488}
   stunned: 0
   stunTimer: 0
   summoned: 0
@@ -798,7 +798,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 697dee2bf988bb948b07dfc580ba834f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1087369488}
 --- !u!61 &376854486
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -921,7 +921,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53872d8c150c569478c02085b8fa7b01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1087369488}
   num: 3
 --- !u!61 &535133304
 BoxCollider2D:
@@ -1046,8 +1046,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 441a718ec0967384da7b67bfb76df706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amulet: {fileID: 0}
-  player: {fileID: 0}
+  amulet: {fileID: 1070989930}
+  player: {fileID: 1087369488}
   stunned: 0
   stunTimer: 0
   summoned: 0
@@ -1231,7 +1231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 697dee2bf988bb948b07dfc580ba834f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1087369488}
 --- !u!61 &863635969
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1511,7 +1511,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soulReq: 1
-  player: {fileID: 0}
+  player: {fileID: 1087369492}
 --- !u!50 &978104264
 Rigidbody2D:
   serializedVersion: 4
@@ -1636,7 +1636,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0322a337bd52cf847a1b9b7e0ad74dc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1087369492}
 --- !u!1 &1031447722
 GameObject:
   m_ObjectHideFlags: 0
@@ -1668,7 +1668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 697dee2bf988bb948b07dfc580ba834f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1087369488}
 --- !u!61 &1031447724
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1798,7 +1798,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1070989930}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -51119,6 +51119,7 @@ GameObject:
   - component: {fileID: 1087369491}
   - component: {fileID: 1087369490}
   - component: {fileID: 1087369489}
+  - component: {fileID: 1087369495}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -51150,7 +51151,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10, y: 11.1}
+  m_Size: {x: 7, y: 8}
   m_EdgeRadius: 0
 --- !u!96 &1087369490
 TrailRenderer:
@@ -51284,6 +51285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1087369491}
+  animator: {fileID: 1087369495}
   jumpForce: 0
   soulCount: 0
   relic1: 0
@@ -51356,6 +51358,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1087369495
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087369488}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7256350ec6c5a574ba32e6c39d0e079b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1100595757
 GameObject:
   m_ObjectHideFlags: 0
@@ -51388,8 +51409,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3930978bf28256c4baa3146cfc3a80f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amulet: {fileID: 0}
-  player: {fileID: 0}
+  amulet: {fileID: 1070989930}
+  player: {fileID: 1087369488}
   stunned: 0
   stunTimer: 0
   summoned: 0
@@ -51541,7 +51562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53872d8c150c569478c02085b8fa7b01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1087369488}
   num: 2
 --- !u!61 &1107208169
 BoxCollider2D:
@@ -51665,7 +51686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 697dee2bf988bb948b07dfc580ba834f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1087369488}
 --- !u!61 &1160538611
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -51788,7 +51809,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 697dee2bf988bb948b07dfc580ba834f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1087369488}
 --- !u!61 &1200991200
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -51911,7 +51932,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 697dee2bf988bb948b07dfc580ba834f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1087369488}
 --- !u!61 &1268271471
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -52034,7 +52055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 697dee2bf988bb948b07dfc580ba834f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1087369488}
 --- !u!61 &1433272513
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -52206,7 +52227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soulReq: 2
-  player: {fileID: 0}
+  player: {fileID: 1087369492}
 --- !u!50 &1549577960
 Rigidbody2D:
   serializedVersion: 4
@@ -52375,8 +52396,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3930978bf28256c4baa3146cfc3a80f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amulet: {fileID: 0}
-  player: {fileID: 0}
+  amulet: {fileID: 1070989930}
+  player: {fileID: 1087369488}
   stunned: 0
   stunTimer: 0
   summoned: 0

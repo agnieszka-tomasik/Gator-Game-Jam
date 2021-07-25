@@ -13,12 +13,6 @@ public class WispController : MonoBehaviour
     public bool summoned = false;
     public float speed = 50.0f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -55,7 +49,7 @@ public class WispController : MonoBehaviour
 
             if (Vector3.Distance(transform.position, amulet.transform.position) <= 0.1)
             {
-                player.SendMessage("SoulCapture");
+                player.SendMessage("SoulCaptured");
                 Destroy(this.gameObject);
             }
         }
