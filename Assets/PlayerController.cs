@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
 
     public double GetRelicCount()
     {
-        int num;
+        int num = 0;
         if (relic1)
         {
             num++;

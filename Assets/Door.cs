@@ -9,7 +9,7 @@ public class Door : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.GetRelicCount >= 3)
+        if (player.GetRelicCount() >= 3)
         {
             // open door
             Debug.Log("Door Open");
