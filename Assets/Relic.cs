@@ -12,6 +12,6 @@ public class Relic : MonoBehaviour
         // when the player walks on it,
         // put in inventory & delete
         player.SendMessage("AddRelic", num);
-        Destroy(gameObject);
+        Destroy(gameObject, 1);
     }
 }
