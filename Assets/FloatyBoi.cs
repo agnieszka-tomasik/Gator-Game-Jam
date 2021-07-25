@@ -63,7 +63,7 @@ public class FloatyBoi : MonoBehaviour
 
             if (Vector3.Distance(transform.position, amulet.transform.position) <= 0.1)
             {
-                player.SendMessage("SoulCapture");
+                player.SendMessage("SoulCaptured");
                 Destroy(this.gameObject);
             }
         }

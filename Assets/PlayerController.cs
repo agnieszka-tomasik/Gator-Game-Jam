@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour
 {
 
     public Rigidbody2D rb;
+    public Animator animator;
+
     public int jumpForce;
     private bool isJumping = false;
     private float maxSpeed = 10;
@@ -33,10 +35,12 @@ public class PlayerController : MonoBehaviour
             if (!isJumping)
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-                GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 20), ForceMode2D.Impulse);
+                GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 30), ForceMode2D.Impulse);
                 isJumping = true;
             }
         }
+
+        animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
     }
 
     void SoulCaptured()
