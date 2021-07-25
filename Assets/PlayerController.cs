@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
         this.soulCount = soulCount;
     }
 
-    double getSoulCount(double soulCount)
+    public double getSoulCount()
     {
         return this.soulCount;
     }
