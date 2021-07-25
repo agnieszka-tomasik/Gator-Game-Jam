@@ -53,6 +53,24 @@ public class PlayerController : MonoBehaviour
         return this.soulCount;
     }
 
+    public double GetRelicCount()
+    {
+        int num;
+        if (relic1)
+        {
+            num++;
+        }
+        if (relic2)
+        {
+            num++;
+        }
+        if (relic3)
+        {
+            num++;
+        }
+        return num;
+    }
+
     void Ouchie()
     {
         float scale = 1.0f;
