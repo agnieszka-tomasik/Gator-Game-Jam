@@ -424,7 +424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e4af9a3b648bb741921b7ed940c5c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPos: {fileID: 963427956}
+  player: {fileID: 963427956}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -760,6 +760,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 963427957}
+  jumpForce: 0
   soulCount: 0
 --- !u!96 &963427960
 TrailRenderer:

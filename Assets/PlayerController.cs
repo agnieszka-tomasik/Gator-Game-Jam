@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
 
     public Rigidbody2D rb;
+    public int jumpForce;
     private bool isJumping = false;
     private float maxSpeed = 10;
     public double soulCount;
@@ -15,6 +16,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
 
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
@@ -34,6 +36,7 @@ public class PlayerController : MonoBehaviour
 
             if (!isJumping)
             {
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
                 GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 20), ForceMode2D.Impulse);
                 isJumping = true;
             }
@@ -52,11 +55,15 @@ public class PlayerController : MonoBehaviour
     {
         return this.soulCount;
     }
+
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Ground")
             isJumping = false;
 
     }
+
+    
 }
 
