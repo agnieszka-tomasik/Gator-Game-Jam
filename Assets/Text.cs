@@ -24,6 +24,10 @@ public class Text : MonoBehaviour
             {
                 m_myText.text = "Please help me open this door.\n You will need to collect three artifacts to get inside.";
             }
+            
+        }
+        void OnCollisionEnter2D(Collision2D other)
+        {
             if (other.gameObject.name == "Barrier" && !seenDoor)
             {
                 seenDoor = true;
