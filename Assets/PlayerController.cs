@@ -52,7 +52,9 @@ public class PlayerController : MonoBehaviour
 
     public void Ouchie ()
     {
+        float scale = 1f;
         // player gets thrown in the opposite direction they were originally going (knockback)
+        rb.velocity = new Vector2(rb.velocity.x * scale * -1, rb.velocity.y * scale * -1);
         Debug.Log("ouchie!");
         
 

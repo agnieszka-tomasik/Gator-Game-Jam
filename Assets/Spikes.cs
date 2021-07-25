@@ -10,9 +10,8 @@ public class Spikes : MonoBehaviour
     {
     }
 
-    void OnCollisionEnter()
+    void OnTriggerEnter2D(Collider2D other)
     {
         player.Ouchie();
-        Debug.Log("oncollisionenter");
     }
 }
