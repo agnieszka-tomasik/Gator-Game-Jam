@@ -53,9 +53,9 @@ public class AuraController : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("An object entered");
+        Debug.Log("Entered: " + other.gameObject.name);
         // If the enemy has entered the trigger sphere
         if (other.gameObject.tag == "Enemy")
         {
@@ -68,9 +68,9 @@ public class AuraController : MonoBehaviour
         }
     }
 
-    void onTriggerExit(Collider other)
+    void onTriggerExit2D(Collider2D other)
     {
-        Debug.Log("An object left");
+        Debug.Log("Exited: " + other.gameObject.name);
         if (other.gameObject.tag == "Enemy")
         {
             enemiesInTrigger.Remove(other.gameObject);
