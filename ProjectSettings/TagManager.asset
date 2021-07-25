@@ -47,3 +47,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Aura
+    uniqueID: 1055086763
+    locked: 0
+  - name: PlayerCharacter
+    uniqueID: 3741212543
+    locked: 0
+  - name: Amulet
+    uniqueID: 478336875
+    locked: 0

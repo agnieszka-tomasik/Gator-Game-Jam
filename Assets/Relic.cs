@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Relic : MonoBehaviour
 {
-    public PlayerController player;
+    public GameObject player;
     public int num;
 
     void OnTriggerEnter2D(Collider2D other)
     {
         // when the player walks on it,
         // put in inventory & delete
-        player.addRelic(num);
+        player.SendMessage("AddRelic", num);
         Destroy(gameObject);
     }
 }

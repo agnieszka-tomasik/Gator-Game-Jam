@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
     public Rigidbody2D rb;
     public double soulCount = 0;
     public bool relic1;
@@ -31,34 +30,38 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public double getSoulCount()
+    void SoulCaptured()
     {
         this.soulCount++;
     }
 
-    public void Ouchie ()
+    public double GetSoulCount()
     {
-        float scale = 1f;
+        return this.soulCount;
+    }
+
+
+    void Ouchie()
+    {
+        float scale = 1.0f;
         // player gets thrown in the opposite direction they were originally going (knockback)
         rb.velocity = new Vector2(rb.velocity.x * scale * -1, rb.velocity.y * scale * -1);
         Debug.Log("ouchie!");
-        
-
     }
 
-    public void addRelic (int number)
+    void AddRelic(int number)
     {
-        if (number == 1)
+        switch (number)
         {
-            relic1 = true;
-        }
-        else if (number == 2)
-        {
-            relic2 = true;
-        }
-        else
-        {
-            relic3 = true;
+            case 1:
+                this.relic1 = true;
+                break;
+            case 2:
+                this.relic2 = true;
+                break;
+            case 3:
+                this.relic3 = true;
+                break;
         }
     }
 }

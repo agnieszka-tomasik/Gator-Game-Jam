@@ -245,7 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53872d8c150c569478c02085b8fa7b01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 764940561}
+  player: {fileID: 764940557}
   num: 1
 --- !u!1 &478677801
 GameObject:
@@ -710,10 +710,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -553754753
+  m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ce66fc6b8f762be46ae77e42b08a9643, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1bc21cf05ada9e34f8e4400fc2d3e514, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -953,12 +953,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6024e18743351446929392c05c270b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 764940557}
+  amulet: {fileID: 0}
   playerPos: {fileID: 764940563}
   spriteRenderer: {fileID: 1008470143}
-  circleCollider: {fileID: 1008470141}
-  timer: 0
-  enemiesInTrigger: []
+  animationTimer: 0
 --- !u!212 &1008470143
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -996,8 +994,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1055086763
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: 5cd84f58e1a339f4f9599f5165af3b40, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1132,7 +1130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 697dee2bf988bb948b07dfc580ba834f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 764940561}
+  player: {fileID: 764940557}
 --- !u!1 &1117701939
 GameObject:
   m_ObjectHideFlags: 0

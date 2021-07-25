@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class Spikes : MonoBehaviour
 {
-    public PlayerController player;
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
+    public GameObject player;
+    
     void OnTriggerEnter2D(Collider2D other)
     {
-        player.Ouchie();
+        if (other.gameObject == player)
+        {
+            player.SendMessage("Ouchie");
+        }
     }
 }
