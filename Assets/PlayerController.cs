@@ -40,6 +40,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+        animator.SetBool("Jump", isJumping);
         animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
     }
 

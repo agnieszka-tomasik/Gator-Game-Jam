@@ -13,7 +13,7 @@ public class Barrier : MonoBehaviour
         if (player.GetSoulCount() >= soulReq)
         {
             // open door
-            Debug.Log("Door Open");
+            //Debug.Log("Door Open");
             Destroy(gameObject, 1);
         }
     }

@@ -12,7 +12,7 @@ public class Door : MonoBehaviour
         if (player.GetRelicCount() >= 3)
         {
             // open door
-            Debug.Log("Door Open");
+            //Debug.Log("Door Open");
             Destroy(gameObject, 1);
         }
     }
