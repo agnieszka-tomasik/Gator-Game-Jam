@@ -9,6 +9,7 @@ public class FloatyBoi : MonoBehaviour
     public float x;
     public float y;
     private double radius;
+    private float theta;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,7 @@ public class FloatyBoi : MonoBehaviour
     void Update()
     {
 
-        float theta = (Time.fixedTime % 180) * 2;
+        theta = (Time.fixedTime % 180) * 2;
         radius = Math.Cos(theta * 3);
         x = (float)(radius * Math.Cos(theta));
         y = (float)(radius * Math.Sin(theta));

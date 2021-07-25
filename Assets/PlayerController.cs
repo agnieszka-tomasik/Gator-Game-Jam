@@ -7,7 +7,9 @@ public class PlayerController : MonoBehaviour
 
     public Rigidbody2D rb;
     public double soulCount;
-
+    public bool relic1;
+    public bool relic2;
+    public bool relic3;
 
 
     // Update is called once per frame
@@ -46,5 +48,29 @@ public class PlayerController : MonoBehaviour
     public double getSoulCount()
     {
         return this.soulCount;
+    }
+
+    public void Ouchie ()
+    {
+        // player gets thrown in the opposite direction they were originally going (knockback)
+        Debug.Log("ouchie!");
+        
+
+    }
+
+    public void addRelic (int number)
+    {
+        if (number == 1)
+        {
+            relic1 = true;
+        }
+        else if (number == 2)
+        {
+            relic2 = true;
+        }
+        else
+        {
+            relic3 = true;
+        }
     }
 }

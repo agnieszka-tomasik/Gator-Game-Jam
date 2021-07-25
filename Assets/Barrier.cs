@@ -19,7 +19,7 @@ public class Barrier : MonoBehaviour
         {
             // open door
             Debug.Log("aldskfl");
-            Destroy(gameObject);
+            Destroy(gameObject, 1);
         }
     }
 }
